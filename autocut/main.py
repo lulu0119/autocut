@@ -50,7 +50,7 @@ def main():
     parser.add_argument(
         "--lang",
         type=str,
-        default="zh",
+        default="en",
         choices=[
             "zh",
             "en",
@@ -133,7 +133,7 @@ def main():
     parser.add_argument(
         "--whisper-model",
         type=str,
-        default=WhisperModel.SMALL.value,
+        default=WhisperModel.LARGE_V2.value,
         choices=WhisperModel.get_values(),
         help="The whisper model used to transcribe.",
     )

@@ -144,7 +144,7 @@ class WhisperModel(AbstractWhisperModel):
                     continue
                 # mark any empty segment that is not very short
                 if start > prev_end + 1.0:
-                    _add_sub(prev_end, start, "< No Speech >")
+                    _add_sub(prev_end, start, "")
                 _add_sub(start, end, s["text"])
                 prev_end = end
 
@@ -298,7 +298,7 @@ class OpenAIModel(AbstractWhisperModel):
                         index=0,
                         start=subs[-1].end,
                         end=subtitle.start,
-                        content="< No Speech >",
+                        content="",
                     )
                 )
             subs.append(subtitle)
