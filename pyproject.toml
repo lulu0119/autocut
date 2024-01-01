@@ -1,0 +1,30 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+requires-python = ">=3.9"
+
+[tool.poetry]
+name = "autocut"
+version = "0.1.0"
+description = "Cut video by subtitles"
+authors = ["Your Name <your.email@example.com>"]
+license = "Apache Software License"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+ffmpeg-python = "*"
+moviepy = "*"
+openai-whisper = "*"
+opencc-python-reimplemented = "*"
+parameterized = "*"
+pydub = "*"
+srt = "*"
+torchaudio = "*"
+tqdm = "*"
+
+[tool.poetry.dev-dependencies]
+openai = "*"
+faster-whisper = "*"
+
+[tool.poetry.scripts]
+autocut = "autocut.main:main"
